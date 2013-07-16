@@ -1,0 +1,39 @@
+###################
+#   git command   #
+###################
+
+
+
+## view definition of remote server in your repository
+>> git remote -v
+    origin git://git.com/app.git (fetch)
+    origin git://git.com/app.git (push)
+when push or pull like this:
+>> git pull origin master
+the 'origin' equals 'git://git.com/app.git', so we know
+origin is just an alias of 'git://git.com/app.git'
+
+
+## push to remote server
+>> git push origin master
+This command push the local branch 'master' to branch 'master' of
+remote server 'origin'.
+Let's see the command format:
+>> git push <remoteServerRef> <localBranchName>:<remoteBranchName>
+remoteServerRef: reference of remote server, usually it is 'origin'
+localBranchName: appoint pushing which branch to remote server
+remoteBranchName: appoint pushing local branch to which branch of remote server
+Usually we use an omitted form:
+>> git push origin master
+this command equals to command:
+>> git push origin master:master
+So, do you understand this command?
+
+
+## pull from remote server
+>> git pull origin master
+OK, Let's have a review to command push format:
+>> git push <remoteServerRef> <localBranchName>:<remoteBranchName>
+I will tell you command 'pull' is almost the same as 'push':
+>> git pull <remoteServerRef> <localBranchName>:<remoteBranchName>
+I think you have got it, haven't you?
