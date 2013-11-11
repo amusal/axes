@@ -1,0 +1,3 @@
+chinese utf8 charset encoding files
+who knows what i am
+中文的UTF8格式的文件啦啦啦啦啦

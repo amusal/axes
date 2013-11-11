@@ -1,0 +1,4 @@
+This is a Chinese encoded file, but is doesn't contains any Chinese character.
+Can you recognize me?
+
+²»ÊÇ°É

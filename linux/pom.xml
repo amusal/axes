@@ -9,18 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>blade</artifactId>
+    <artifactId>linux</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>net.sourceforge.jchardet</groupId>
-            <artifactId>jchardet</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

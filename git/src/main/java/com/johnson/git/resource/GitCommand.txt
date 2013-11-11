@@ -36,4 +36,19 @@ OK, Let's have a review to command push format:
 >> git push <remoteServerRef> <localBranchName>:<remoteBranchName>
 I will tell you command 'pull' is almost the same as 'push':
 >> git pull <remoteServerRef> <localBranchName>:<remoteBranchName>
-I think you have got it, haven't you?
+
+
+## merge
+>> git checkout master
+>> git merge --no-ff develop
+--no-ff: no fast-forward
+
+## release branch
+>> git checkout -b release-1.0 develop
+>> git checkout master
+>> git merge --no-ff release-1.0
+>> git tag -a v1.0
+>> git push origin v1.0
+or
+>> git push origin --tags
+
