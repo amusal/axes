@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.icntv.tv/users"
+        elementFormDefault="qualified">
+
+    <xsd:annotation>
+        <xsd:documentation><![CDATA[
+                Define the user info
+        ]]></xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="users">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="user" minOccurs="1" maxOccurs="unbounded" type="userType"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:simpleType name="countriesEnum">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="China" />
+            <xsd:enumeration value="Japan"/>
+            <xsd:enumeration value="Korea"/>
+            <xsd:whiteSpace value="preserve"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="extendsCountries">
+        <xsd:complexContent>
+            <xsd:extension base="xsd:string">
+                <xsd:sequence>
+                    <xsd:element name="country" type="countriesEnum"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="idType">
+        <xsd:complexContent>
+            <xsd:restriction base="xsd:string">
+                <xsd:attribute name="value" use="required"/>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:group name="userGroup">
+        <xsd:sequence>
+            <xsd:element name="uname" type="xsd:string" />
+            <xsd:element name="uid">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="\\d{5}"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="mobile" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:group>
+
+    <xsd:complexType name="userType">
+        <xsd:sequence>
+            <xsd:group ref="userGroup" />
+            <xsd:element name="age" default="0" >
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:minInclusive value="0"/>
+                        <xsd:maxInclusive value="120"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="salary" default="1.0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:fractionDigits value="2"/>
+                        <xsd:totalDigits value="5"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="birthday" type="xsd:date" />
+            <xsd:element name="countries" type="extendsCountries" minOccurs="1"/>
+            <xsd:element name="idElement" type="idType"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:positiveInteger" use="optional">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[
+                        id
+                ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+    
+
+</xsd:schema>

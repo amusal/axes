@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>
+    <b>123</b>
+    <a class="array">
+        <e type="function" params="i,j">
+            return matrix[i][j];
+        </e>
+    </a>
+    <a class="array">
+        <e type="function" params="i,j">
+            return matrix[i][j];
+        </e>
+    </a>
+</p>

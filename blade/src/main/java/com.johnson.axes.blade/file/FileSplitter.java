@@ -1,4 +1,4 @@
-package com.johnson.axes.blade;
+package com.johnson.axes.blade.file;
 
 import java.io.*;
 
@@ -25,7 +25,7 @@ public class FileSplitter {
         String name = getFileName(srcFile);
         BufferedReader br = new BufferedReader(new FileReader(file));
         long counter = 0L;
-        String line = null;
+        String line;
 
         String newFileName = destinationDir + File.separator + generateNewFileName(name, "001");
         createNewFile(newFileName);

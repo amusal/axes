@@ -16,11 +16,11 @@
 package com.johnson.axes.blade;
 
 
+import com.johnson.axes.blade.file.CharsetDetector;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 

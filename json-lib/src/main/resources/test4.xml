@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Service id="MovieDetailList">
+    <id><![CDATA[758883]]></id>
+    <name><![CDATA[墨攻]]></name>
+    <length><![CDATA[1]]></length>
+    <type><![CDATA[电影]]></type>
+    <class><![CDATA[动作|战争]]></class>
+    <zone><![CDATA[中国大陆|中国香港]]></zone>
+    <director><![CDATA[张之亮]]></director>
+    <actor><![CDATA[刘德华|范冰冰|吴奇隆]]></actor>
+    <language><![CDATA[其他]]></language>
+    <maskDescription><![CDATA[]]></maskDescription>
+    <releaseDate><![CDATA[2006]]></releaseDate>
+    <productPrice><![CDATA[0]]></productPrice>
+    <productName><![CDATA[]]></productName>
+    <productType><![CDATA[]]></productType>
+    <picurl><![CDATA[http://images.is.ysten.com:8080/images/ysten/images/2011/08/mogong20110824.jpg]]></picurl>
+    <catgId><![CDATA[691]]></catgId>
+    <isNew><![CDATA[false]]></isNew>
+    <information>
+        <![CDATA[诸国纷争群雄争霸的战国时期，赵国为一举攻下势均力敌的燕国，决定先拿夹在赵燕之间的梁国开刀，于是妇孺平民加起只有四千余人的梁城被赵国十万大军包围。危难之时，梁王向以守城著称的墨家请求一支可以抵抗赵军的守军，却等来其貌不扬、孤身应战、主张“廉爱非攻”的墨者革离。]]></information>
+    <relationlist>
+        <![CDATA[http://epg.is.ysten.com:8080/yst-epg/web/program!getRelationProgramseries.action?directors=%E5%BC%A0%E4%B9%8B%E4%BA%AE&actors=%E5%88%98%E5%BE%B7%E5%8D%8E%7C%E8%8C%83%E5%86%B0%E5%86%B0%7C%E5%90%B4%E5%A5%87%E9%9A%86&programSeriesId=758883&templateId=4]]></relationlist>
+    <sources>
+        <source>
+            <id><![CDATA[1145713]]></id>
+            <name><![CDATA[[HD]墨攻]]></name>
+            <fileSize><![CDATA[1526]]></fileSize>
+            <action><![CDATA[OpenMedia]]></action>
+            <actionURL><![CDATA[http://vod01.media.ysten.com/media/new/2011/08/25/hd_dy_mg_20110825.ts]]></actionURL>
+        </source>
+    </sources>
+</Service>

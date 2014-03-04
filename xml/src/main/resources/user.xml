@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users xmlns="http://www.icntv.tv/users"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.icntv.tv/users http://www.icntv.tv/users.xsd">
+
+    <user>
+        <uname></uname>
+        <uid></uid>
+        <mobile></mobile>
+        <age></age>
+        <salary></salary>
+        <birthday></birthday>
+        <countries>
+            <country>american</country>
+        </countries>
+        <idElement value="asd"/>
+    </user>
+    <user>
+        <uname></uname>
+        <uid></uid>
+        <mobile></mobile>
+        <age></age>
+        <salary></salary>
+        <birthday></birthday>
+        <countries>
+            <country></country>
+        </countries>
+        <idElement value=""/>
+    </user>
+</users>

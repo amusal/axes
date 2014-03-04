@@ -1,0 +1,26 @@
+<project>
+    <parent>
+        <group>tv.futuretv.axes</group>
+        <artifactId>parent</artifactId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <group>tv.futuretv.axes</group>
+    <artifact>json</artifact>
+    <version>1.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <classifier>jdk15</classifier>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <classifier>20090211</classifier>
+        </dependency>
+    </dependencies>
+</project>

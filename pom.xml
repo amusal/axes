@@ -15,7 +15,20 @@
         <module>webservice</module>
         <module>regex</module>
         <module>linux</module>
+        <module>quartz</module>
+        <module>spring</module>
+        <module>json-lib</module>
+        <module>spring-mvc</module>
+        <module>jedis</module>
+        <module>analyze</module>
+        <module>xml</module>
+        <module>mina</module>
     </modules>
+
+    <properties>
+        <spring.version>3.2.1.RELEASE</spring.version>
+        <mina.version>2.0.7</mina.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
@@ -30,7 +43,57 @@
                 <version>4.11</version>
                 <scope>test</scope>
             </dependency>
-	    </dependencies>
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>2.2.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz-jobs</artifactId>
+                <version>2.2.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.json-lib</groupId>
+                <artifactId>json-lib</artifactId>
+                <version>2.4</version>
+                <classifier>jdk15</classifier>
+            </dependency>
+            <dependency>
+                <groupId>xom</groupId>
+                <artifactId>xom</artifactId>
+                <version>1.2.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>20131018</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.mina</groupId>
+                <artifactId>mina-core</artifactId>
+                <version>${mina.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.mina</groupId>
+                <artifactId>mina-example</artifactId>
+                <version>${mina.version}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
 </project>
