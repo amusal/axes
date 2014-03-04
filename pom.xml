@@ -88,11 +88,6 @@
                 <artifactId>mina-core</artifactId>
                 <version>${mina.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.mina</groupId>
-                <artifactId>mina-example</artifactId>
-                <version>${mina.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

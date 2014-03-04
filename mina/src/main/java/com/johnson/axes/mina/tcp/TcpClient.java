@@ -15,11 +15,7 @@
  */
 package com.johnson.axes.mina.tcp;
 
-import org.apache.mina.core.RuntimeIoException;
-import org.apache.mina.core.future.CloseFuture;
 import org.apache.mina.core.session.IoSession;
-import org.apache.mina.example.sumup.ClientSessionHandler;
-import org.apache.mina.example.sumup.codec.SumUpProtocolCodecFactory;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory;
 import org.apache.mina.filter.logging.LoggingFilter;
@@ -43,14 +39,14 @@ public class TcpClient {
         connector.setConnectTimeoutMillis(CONNECT_TIMEOUT);
 
         if (USE_CUSTOM_CODEC) {
-            connector.getFilterChain().addLast("codec",
-                    new ProtocolCodecFilter(new SumUpProtocolCodecFactory(false)));
+//            connector.getFilterChain().addLast("codec",
+//                    new ProtocolCodecFilter(new SumUpProtocolCodecFactory(false)));
         } else {
             connector.getFilterChain().addLast("codec",
                     new ProtocolCodecFilter(new ObjectSerializationCodecFactory()));
         }
         connector.getFilterChain().addLast("logger", new LoggingFilter());
-        connector.setHandler(new ClientSessionHandler(new int[] {1}));
+//        connector.setHandler(new ClientSessionHandler(new int[] {1}));
         IoSession session;
 
 //        while (true) {

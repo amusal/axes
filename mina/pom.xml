@@ -16,10 +16,6 @@
             <groupId>org.apache.mina</groupId>
             <artifactId>mina-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.mina</groupId>
-            <artifactId>mina-example</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
