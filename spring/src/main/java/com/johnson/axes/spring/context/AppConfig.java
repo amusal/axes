@@ -79,7 +79,7 @@ public class AppConfig {
 
     @Bean
     public DataSource dataSource() {
-        return new DriverManagerDataSource(jdbcUrl, username, password);
+        return null;
     }
 
     public static void main(String[] args) {
@@ -99,51 +99,51 @@ public class AppConfig {
         }
     }
 
-    public static class DriverManagerDataSource implements DataSource {
-
-        public DriverManagerDataSource(String url, String username, String password) {
-            System.out.println(url + ", " + username + ", " + password);
-        }
-
-        @Override
-        public Connection getConnection() throws SQLException {
-            return null;  //To change body of implemented methods use File | Settings | File Templates.
-        }
-
-        @Override
-        public Connection getConnection(String username, String password) throws SQLException {
-            return null;  //To change body of implemented methods use File | Settings | File Templates.
-        }
-
-        @Override
-        public PrintWriter getLogWriter() throws SQLException {
-            return null;  //To change body of implemented methods use File | Settings | File Templates.
-        }
-
-        @Override
-        public void setLogWriter(PrintWriter out) throws SQLException {
-            //To change body of implemented methods use File | Settings | File Templates.
-        }
-
-        @Override
-        public void setLoginTimeout(int seconds) throws SQLException {
-            //To change body of implemented methods use File | Settings | File Templates.
-        }
-
-        @Override
-        public int getLoginTimeout() throws SQLException {
-            return 0;  //To change body of implemented methods use File | Settings | File Templates.
-        }
-
-        @Override
-        public <T> T unwrap(Class<T> iface) throws SQLException {
-            return null;  //To change body of implemented methods use File | Settings | File Templates.
-        }
-
-        @Override
-        public boolean isWrapperFor(Class<?> iface) throws SQLException {
-            return false;  //To change body of implemented methods use File | Settings | File Templates.
-        }
-    }
+//    public static class DriverManagerDataSource implements DataSource {
+//
+//        public DriverManagerDataSource(String url, String username, String password) {
+//            System.out.println(url + ", " + username + ", " + password);
+//        }
+//
+//        @Override
+//        public Connection getConnection() throws SQLException {
+//            return null;  //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//
+//        @Override
+//        public Connection getConnection(String username, String password) throws SQLException {
+//            return null;  //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//
+//        @Override
+//        public PrintWriter getLogWriter() throws SQLException {
+//            return null;  //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//
+//        @Override
+//        public void setLogWriter(PrintWriter out) throws SQLException {
+//            //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//
+//        @Override
+//        public void setLoginTimeout(int seconds) throws SQLException {
+//            //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//
+//        @Override
+//        public int getLoginTimeout() throws SQLException {
+//            return 0;  //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//
+//        @Override
+//        public <T> T unwrap(Class<T> iface) throws SQLException {
+//            return null;  //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//
+//        @Override
+//        public boolean isWrapperFor(Class<?> iface) throws SQLException {
+//            return false;  //To change body of implemented methods use File | Settings | File Templates.
+//        }
+//    }
 
 }
