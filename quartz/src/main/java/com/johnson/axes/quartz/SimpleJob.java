@@ -71,7 +71,7 @@ public class SimpleJob implements Job {
                 + ", every " + trigger.getRepeatInterval() / 1000L + " seconds");
 
         job = JobBuilder.newJob(SimpleJob.class).withIdentity("job3", "group1").build();
-        trigger = (SimpleTrigger) TriggerBuilder
+        trigger = TriggerBuilder
                 .newTrigger()
                 .withIdentity("trigger3", "group1")
                 .startAt(startTime)

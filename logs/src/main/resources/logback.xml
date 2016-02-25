@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- default implicated class is ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+      <charset>UTF-8</charset>
+    </encoder>
+  </appender>
+
+  <appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
+    <file>target/logs/granularity.log</file>
+    <encoder>
+      <pattern>%d{yyyy-mm-dd HH:mm:ss.SSS} [%thread] %-5level %logger{1} - %msg%n</pattern>
+      <charset>UTF-8</charset>
+    </encoder>
+    <append>true</append>
+    <!-- if true, safe write to the same file by file appender from different JVM-->
+    <prudent>false</prudent>
+  </appender>
+
+  <appender name="rollingAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>target/logs/heuristic.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>target/heuristic-%d{yyyy-MM-dd}.log</fileNamePattern>
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+      <charset>UTF-8</charset>
+    </encoder>
+    <append>false</append>
+    <prudent>false</prudent>
+  </appender>
+
+  <logger name="ch.qos.logback.classic" level="ERROR" additivity="false">
+    <appender-ref ref="STDOUT" />
+  </logger>
+
+  <!-- set additivity as true to use hierarchy appender-ref. This may result a duplicate output. -->
+  <logger name="com.johnson.axes.logs" level="DEBUG" additivity="false">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="fileAppender" />
+    <appender-ref ref="rollingAppender" />
+  </logger>
+
+  <root level="DEBUG">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="rollingAppender" />
+  </root>
+</configuration>
